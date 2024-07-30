@@ -10,6 +10,9 @@ module.exports = {
       margin: {
         DEFAULT: "auto",
       },
+      maxWidth: {
+        DEFAULT: "1500px", // Set the default max-width for the container
+      },
     },
     extend: {
       width: {

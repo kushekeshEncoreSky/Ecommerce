@@ -27,7 +27,7 @@ const Header: React.FC = () => {
   return (
     <div className="container">
       <header className="bg-white p-4 align-middle w-full">
-        <div className="hidden md:flex items-center justify-between max-w-screen-lg mx-auto">
+        <div className="hidden md:flex items-center justify-between max-w-screen-xl mx-auto">
           <img src={logoImage} alt="Logomark" className="h-8" />
 
           <nav className="flex-1 flex justify-center space-x-6">
@@ -80,7 +80,7 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        <div className="md:hidden flex items-center justify-between max-w-screen-lg mx-auto">
+        <div className="md:hidden flex items-center justify-between max-w-screen-xl mx-auto">
           <img src={logoMobileView} alt="Logomark" className="h-8" />
           <div className="relative">
             <input

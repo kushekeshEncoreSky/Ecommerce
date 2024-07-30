@@ -6,7 +6,6 @@ import Button from "./Button";
 import Input from "./Input";
 import PageTitle from "./PageTitle";
 import LinkButton from "./Link";
-import Footer from "./Footer.tsx";
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
@@ -95,7 +94,6 @@ const Login: React.FC = () => {
           </div>
         </div>
       </main>
-      
     </div>
   );
 };

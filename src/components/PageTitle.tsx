@@ -2,8 +2,8 @@
 import React from "react";
 
 interface PageTitleProps {
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
 }
 
 const PageTitle: React.FC<PageTitleProps> = ({ title, subtitle }) => {

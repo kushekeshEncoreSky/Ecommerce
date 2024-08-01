@@ -8,6 +8,7 @@ import Home from "../src/pages/Home";
 import { Route, Routes } from "react-router";
 import { UserProvider } from "./components/UserContext";
 import Footer from "./components/Footer";
+import Listing from "./pages/Listing";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Home />} />
+          <Route path="/Listing" element={<Listing />} />
         </Routes>
         <Footer />
       </div>

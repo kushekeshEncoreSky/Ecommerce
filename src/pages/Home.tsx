@@ -74,7 +74,12 @@ const Home: React.FC = () => {
       </div>
       {/* card and api call  */}
       <div className="mx-auto max-w-screen-xl">
-        <ProductGrid />
+        <ProductGrid
+          startIndex={0}
+          endIndex={4}
+          title="Best Selling"
+          subtitle="SHOP NOW"
+        />
       </div>
       {/* Browse  our Fasion Paradise */}
       <div className=" bg-zinc-50">
@@ -103,7 +108,12 @@ const Home: React.FC = () => {
       </div>
       {/* Browse fassion paradise  */}
       <div className="mx-auto max-w-screen-xl">
-        <ProductGrid />
+        <ProductGrid
+          startIndex={4}
+          endIndex={8}
+          title="New Arrivals"
+          subtitle="DISCOVER MORE"
+        />
       </div>
       {/* Join Our Newsletter */}
       <div className="bg-white-400">
@@ -118,12 +128,12 @@ const Home: React.FC = () => {
               We love to surprise our subscribers with occasional gifts.
             </p>
           </div>
-          <div className="p-8">
+          <div className="p-8 flex mb-12">
             <Input
               placeholder="Your email address"
               className="placeholder-black-100 placeholder-font-Inter  w-full sm:w-80 mr-1"
             />
-            <ButtonCommon className="w-[120px] ml-[15px] p-[7px] font-Inter font-medium">
+            <ButtonCommon className="w-[120px] ml-[15px] p-[5px] font-Inter font-medium">
               {" "}
               Subscribe
             </ButtonCommon>

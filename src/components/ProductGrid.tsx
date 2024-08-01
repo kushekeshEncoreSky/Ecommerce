@@ -9,24 +9,38 @@ interface Product {
   thumbnail: string;
 }
 
-const ProductGrid: React.FC = () => {
+interface ProductGridProps {
+  startIndex: number;
+  endIndex: number;
+  title?: string;
+  subtitle?: string;
+}
+
+const ProductGrid: React.FC<ProductGridProps> = ({
+  startIndex,
+  endIndex,
+  title,
+  subtitle,
+}) => {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
     fetch("https://dummyjson.com/products")
       .then((response) => response.json())
-      .then((data) => setProducts(data.products.slice(0, 4)));
-  }, []);
+      .then((data) => setProducts(data.products.slice(startIndex, endIndex)));
+  }, [startIndex, endIndex]);
 
   return (
     <div className="container">
       <div className="mx-auto max-w-screen-xl">
-        <h2 className=" text-base align-middle mb-4 mt-[120px] text-gray-400 text-center font-Inter font-medium">
-          SHOP NOW
+        <h2 className="text-base align-middle mb-4 mt-[120px] text-gray-400 text-center font-Inter font-medium">
+          {subtitle}
         </h2>
-        <h3 className="text-2xl font-bold mb-6  text-center font-Inter ">
-          Best Selling
+        <h3 className="text-2xl font-bold mb-6 text-center font-Inter">
+          {title}
         </h3>
+
+        {/* ProductGrid content */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:mb-32">
           {products.map((product) => (
             <ProductCard
